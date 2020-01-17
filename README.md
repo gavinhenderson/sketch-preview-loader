@@ -1,4 +1,4 @@
-# sketch-preview-loader
+# Sketch Preview Loader
 
 > A webpack loader for `.sketch` files that loads previews
 
