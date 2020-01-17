@@ -44,11 +44,13 @@ module.exports = {
 Once you have got the loader setup you can import sketch files. Here is an example of how to load a sketch file and render it as an `img`
 
 ```js
-import preview from './design.sketch';
+import myDesign from './design.sketch';
+import { preview as myDesignPreview } from './design.sketch'
 
 const MySketchPreview = () => (
   <div>
-    <img src={preview} />
+    <img src={myDesign.preview} />
+    <img src={myDesignPreview} />
   </div>
 )
 ```
