@@ -2,8 +2,7 @@ import path from 'path';
 
 import webpack from 'webpack';
 import { createFsFromVolume, Volume } from 'memfs';
-
-const joinPath = require('memory-fs/lib/join');
+import joinPath from 'memory-fs/lib/join';
 
 export default (fixture) => {
   const compiler = webpack({
