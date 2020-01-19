@@ -3,7 +3,7 @@ import path from 'path';
 import loaderUtils from 'loader-utils';
 import validateOptions from 'schema-utils';
 
-import schema from './options.json';
+import schema from './options.json.js';
 
 export default function loader(content) {
   const options = loaderUtils.getOptions(this) || {};

@@ -17,7 +17,7 @@ export default (fixture) => {
         {
           test: /\.txt$/,
           use: {
-            loader: path.resolve(__dirname, '../src/loader.js'),
+            loader: path.resolve(__dirname, '../_src/loader.js'),
             options: {
               name: 'Alice',
             },
