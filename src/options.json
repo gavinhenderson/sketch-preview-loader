@@ -1,0 +1,14 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "withMeta": {
+      "description": "Decides if the meta is bundled",
+      "anyOf": [
+        {
+          "type": "boolean"
+        }
+      ]
+    }
+  },
+  "type": "object"
+}

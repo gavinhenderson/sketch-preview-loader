@@ -4,7 +4,7 @@ import webpack from 'webpack';
 import { createFsFromVolume, Volume } from 'memfs';
 import joinPath from 'memory-fs/lib/join';
 
-export default (fixture) => {
+export default (fixture, options) => {
   const compiler = webpack({
     context: __dirname,
     entry: `./${fixture}`,
@@ -18,6 +18,7 @@ export default (fixture) => {
           test: /\.sketch$/,
           use: {
             loader: path.resolve(__dirname, '../src/loader.js'),
+            options,
           },
         },
       ],
