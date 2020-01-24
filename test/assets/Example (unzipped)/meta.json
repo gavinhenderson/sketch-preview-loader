@@ -1,0 +1,30 @@
+{
+  "commit": "81eff2f2d8beb0088d444fdc433b9f6e1bf021f0",
+  "pagesAndArtboards": {
+    "E8C1F155-DC56-49BA-985B-C8FB580AF6F9": {
+      "name": "Page 1",
+      "artboards": {
+        "ACB91D6F-FC6B-4D67-A845-BDC393B1A773": { "name": "Card" },
+        "652CE84C-E29A-4B89-B08A-29B78D7D75D1": { "name": "Oval" }
+      }
+    }
+  },
+  "version": 123,
+  "fonts": ["Helvetica"],
+  "compatibilityVersion": 99,
+  "app": "com.bohemiancoding.sketch3",
+  "autosaved": 0,
+  "variant": "NONAPPSTORE",
+  "created": {
+    "commit": "81eff2f2d8beb0088d444fdc433b9f6e1bf021f0",
+    "appVersion": "62",
+    "build": 91390,
+    "app": "com.bohemiancoding.sketch3",
+    "compatibilityVersion": 99,
+    "version": 123,
+    "variant": "NONAPPSTORE"
+  },
+  "saveHistory": ["NONAPPSTORE.91390"],
+  "appVersion": "62",
+  "build": 91390
+}

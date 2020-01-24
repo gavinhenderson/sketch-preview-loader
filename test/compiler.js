@@ -17,7 +17,7 @@ export default (fixture) => {
         {
           test: /\.sketch$/,
           use: {
-            loader: path.resolve(__dirname, '../src'),
+            loader: path.resolve(__dirname, '../src/loader.js'),
           },
         },
       ],
