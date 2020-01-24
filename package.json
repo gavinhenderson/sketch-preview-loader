@@ -4,7 +4,7 @@
   "description": "> A webpack loader for `.sketch` files that loads previews",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest /test",
     "lint": "eslint ."
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/gavinhenderson/sketch-preview-loader#readme",
   "dependencies": {
     "loader-utils": "^1.2.3",
-    "schema-utils": "^2.6.4"
+    "schema-utils": "^2.6.4",
+    "unzipper": "^0.10.7"
   },
   "devDependencies": {
     "@webpack-contrib/eslint-config-webpack": "^3.0.0",
