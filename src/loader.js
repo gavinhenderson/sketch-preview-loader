@@ -10,10 +10,9 @@ export default async function loader(source) {
   validateOptions(schema, options);
 
   const previewFile = await getPreviewFile(source);
-
-  console.log(previewFile);
+  this.emitFile('./preview.png', previewFile);
 
   return `export default 'test'`;
 }
 
-module.exports.raw = true;
+export const raw = true;

@@ -33,7 +33,7 @@ export default (fixture, options) => {
       if (err) return reject(err);
       if (stats.hasErrors()) return reject(new Error(stats.toJson().errors));
 
-      return resolve(stats);
+      return resolve({ stats, fileSystem: compiler.outputFileSystem });
     });
   });
 };
