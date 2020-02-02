@@ -2,8 +2,9 @@
   "name": "sketch-preview-loader",
   "version": "1.0.0",
   "description": "> A webpack loader for `.sketch` files that loads previews",
-  "main": ".eslintrc.js",
+  "main": "/dist/laoder.js",
   "scripts": {
+    "build": "babel src -d dist",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -25,6 +26,8 @@
     "unzipper": "^0.10.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
     "@webpack-contrib/eslint-config-webpack": "^3.0.0",
     "babel-jest": "^24.9.0",
     "babel-preset-env": "^1.7.0",
