@@ -16,10 +16,12 @@ export default (fixture, options) => {
       rules: [
         {
           test: /\.sketch$/,
-          use: {
-            loader: path.resolve(__dirname, '../src/loader.js'),
-            options,
-          },
+          use: [
+            {
+              loader: path.resolve(__dirname, '../src/loader.js'),
+              options,
+            },
+          ],
         },
       ],
     },
