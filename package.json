@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src -d dist --copy-files",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "example": "cd example && npm start"
   },
   "repository": {
     "type": "git",
