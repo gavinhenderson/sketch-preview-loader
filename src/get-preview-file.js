@@ -1,6 +1,6 @@
 import unzipper from 'unzipper';
 
-const PREVIEWS_FOLDER_NAME = 'previews';
+const PREVIEWS_FOLDER_NAME = 'preview.png';
 
 const getPreviewFile = async (source) => {
   const directory = await unzipper.Open.buffer(source);

@@ -1,14 +1,12 @@
 import { getOptions } from 'loader-utils';
 import validateOptions from 'schema-utils';
-import fileLoader from 'file-loader';
-import imageLoader from 'image-webpack-loader';
 
 import schema from './options.json';
 import getPreviewFile from './get-preview-file';
 
 const DEFAULT_OPTIONS = { withMeta: false };
 
-export default async function loader(source) {
+async function asyncLoader(source) {
   const userOptions = this.query ? getOptions(this) : {};
   const options = { ...DEFAULT_OPTIONS, ...userOptions };
 
@@ -16,12 +14,23 @@ export default async function loader(source) {
 
   const previewFile = await getPreviewFile(source);
 
-  // const fileLoaderOutput = fileLoader(previewFile);
-  // const imageLoaderOutput = imageLoader(fileLoaderOutput).bind(this);
+  return previewFile;
+}
 
-  console.log('GOT THIS FAR');
+export default function loader(...args) {
+  const callback = this.async();
+  const bindedLoader = asyncLoader.bind(this);
 
-  return 'export default "Hey Alice!\\n"';
+  const promise = new Promise(async (res, rej) => {
+    try {
+      const loaderResult = await bindedLoader(...args);
+      res(loaderResult);
+    } catch (e) {
+      rej(e);
+    }
+  });
+
+  promise.then((content) => callback(null, content)).catch((e) => callback(e));
 }
 
 export const raw = true;
