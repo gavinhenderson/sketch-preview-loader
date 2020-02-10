@@ -9,9 +9,12 @@ module.exports = {
       {
         test: /\.(sketch)$/,
         exclude: /node_modules/,
-        use: {
-          loader: sketchLoaderPath,
-        },
+        use: [
+          'file-loader',
+          {
+            loader: sketchLoaderPath,
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
