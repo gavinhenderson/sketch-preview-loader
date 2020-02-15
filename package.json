@@ -1,6 +1,6 @@
 {
   "name": "sketch-preview-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> A webpack loader for `.sketch` files that loads previews",
   "main": "/dist/loader.js",
   "scripts": {
