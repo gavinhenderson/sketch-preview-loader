@@ -6,11 +6,11 @@ Table of contents:
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Example](#example)
+- [Roadmap](#roadmap)
 - [Inspiration](#inspiration)
 
 ## Installation
-
-> NOTE: This is currently un-implemented
 
 To use the loader install it from NPM by doing:
 
@@ -20,9 +20,7 @@ $ npm install sketch-preview-loader --save-dev
 
 ## Usage
 
-> NOTE: This is currently un-implemented
-
-You first have to use add the loader rule to you **`webpack.config.js`** file like so:
+You first have to use add the loader rule to you **`webpack.config.js`**. You have to chain the [`file-loader`](https://github.com/webpack-contrib/file-loader) loader before the `sketch-preview-loader`, see below an example:
 
 ```js
 module.exports = {
@@ -31,6 +29,7 @@ module.exports = {
       {
         test: /\.(sketch)$/i,
         use: [
+          'file-loader',
           {
             loader: 'sketch-preview-loader',
           },
@@ -44,16 +43,31 @@ module.exports = {
 Once you have got the loader setup you can import sketch files. Here is an example of how to load a sketch file and render it as an `img`
 
 ```js
-import myDesigns from './design.sketch';
-import { previews as myDesignPreviews } from './design.sketch';
+import myDesignSrc from './design.sketch';
 
 const MySketchPreview = () => (
   <div>
-    <img src={myDesign.previews[0].src} />
-    <img src={myDesignPreview[0].src} />
+    <img src={myDesignSrc} />
   </div>
 );
 ```
+
+## Example
+
+To see a working example go into the [`example` directory](/example). You can run the example from the root by running:
+
+```
+npm run example
+```
+
+## Roadmap
+
+There is a list of features that I would like to add eventually. A non-exhaustive list of future imporvements:
+
+- Expose metadata
+- Add working tests
+- Make the image file have a non `.sketch` extension
+- Make the loader chain with an image file loader for optimitations
 
 ## Inspiration
 
